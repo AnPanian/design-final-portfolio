@@ -99,7 +99,7 @@ textarea {
    ========================================================================== */
 /**********Body styles*******/
 body {
-  margin: 20px;
+  margin: 8px;
   font-size: 16px;
   display: flex;
   font-family: "hind";
@@ -121,38 +121,46 @@ h1 {
 header .logo {
     display:none;
 }
-header .content-wrapper {
-    display:flex;
-    justify-content:center;
-    align-content:center;
-    flex-direction: column;
+
+header .content-wrapper,
+footer .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background: #fbfcf7;
 }
 
-header img {
-    width: 90%;
+.nav {
+    justify-content: center;
 }
 
 .nav ul {
-    width:70%;
+    width:50%;
     display:flex;
     justify-content: space-between;
+    text-align: center;
+    padding-left: 55px;
 }
   .nav ul li {
     display: inline-block;
+    justify-content: center;
+    padding-left: 55px;
   }
-  .nav ul li a {
-    
-    font-size: 1.3em;
-    
-    text-decoration: none;
-    color: black;
-  }
+    .nav ul li a {
+      font-size: .8em;
+      text-decoration: none;
+      color: black;
+      text-align: center;
+
+    }
 
 .social {
   padding-left:10px;
-  width:90%;
+  width:75%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  padding-left: 60px;
 }
 .social p{
       display:inline-block; 
@@ -163,11 +171,33 @@ main {
   background-image: url(../img/andrew-coelho-unsplash.jpg);
   background-position:center;
 }
+main .content-wrapper {
+    padding: 8px;
+}
 
+/*******footer******/
 
+footer .content-wrapper {
+    text-align: center;
 
+}
 
+footer .contact-info {
+    font-size: .8em;
+}
 
+footer .copywrite {
+    font-size: .5em;
+}
+
+main #slide-show {
+  width: 100%;
+}
+
+main #slide-show img {
+    width: 100%;
+    max-height: 300px;
+}
 
 
 
@@ -262,79 +292,252 @@ main {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 765px) {
+  /* tablet settings */
+
+  body {
+      padding: 12px;
+  }
+  header .mobile-logo {
+    display: none;
+  }
+
+  header .logo {
+      display:initial;
+  }
+  header .content-wrapper {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: row;
+  }
+  header nav {
+      display:flex;
+      justify-content:center;
+      align-content:center;
+      width: 13%;
+  }
+
+  header .nav ul {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 10px;
+    width: 13%;
+  }
+
+  header .nav ul li {
+      font-size:1em;
+      padding-left:10px;
+  }
+
+  header .logo {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  header .logo img {
+      width:100%;
+  }
+  header .social {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-top: 10px;
+    width: 15%;
+  }
+  
+
+  main .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+
+  main .portfolio {
+    text-align: center;
+    
+  }
+
+  main #slide-show {
+    width: 60%;
+    padding-bottom: 20px;
+  }
+
+    main #slide-show .img {
+      width: 100%;
+    }
+
+  footer .content-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+footer .contact-info {
+    padding-top:10px;
+}
+footer .copywrite {
+    padding-top: 30px;
 }
 
-/* ==========================================================================
+@media only screen and (min-width: 1200px) {
+  /* desktop*/
+  body {
+      width:100%;
+      padding: 25px;
+  }
+
+header .content-wrapper {
+  padding:10px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+  header .nav {
+    padding-top: 15px;
+    display: flex;
+    align-content: center;
+  }
+  header .nav ul li {
+      font-size:1.5em;
+  }
+  header .logo {
+      padding-left:10px;
+      width:35%;
+  }
+  header .logo img {
+      width:90%;
+      padding-left:50px;
+  }
+  header .social {
+    width:20%;
+    display: flex;
+    padding-top:35px;
+    justify-content: space-around;
+    align-content: center;
+  }
+  header .social p {
+      font-size: 1em;
+  }
+  main .content-wrapper {
+      height: 700px;
+      display:flex;
+      justify-content:center;
+      align-content:center;
+  }
+  main .portfolio {
+      font-size:1.8em;
+  }
+  main #slide-show {
+      display:flex;
+      justify-content:center;
+      align-content:center;
+      width:80%;
+      height: 80%;
+      max-height: 1000px;
+  }
+    main #slide-show img {
+      width: 85%;
+      max-height: 1200px;
+    }
+
+footer {
+        display:flex;
+        justify-content:space-around;
+        align-content:center;
+        flex-flow:column;
+    }
+footer .content-wrapper {
+        display: inline-block;
+}
+
+  footer .contact-info {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: row;
+  }
+  footer .copywrite {
+      font-size:.7em;
+  }
+}
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
-@media print {
-  *,
-  *:before,
-  *:after {
-    background: transparent !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-  /*
+  @media print {
+    *,
+    *:before,
+    *:after {
+      background: transparent !important;
+      color: #000 !important;
+      /* Black prints faster */
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+
+      a[href]:after {
+        content: " (" attr(href) ")";
+      }
+
+    abbr[title]:after {
+      content: " (" attr(title) ")";
+    }
+    /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
-  pre {
-    white-space: pre-wrap !important;
-  }
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-  /*
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+      content: "";
+    }
+
+    pre {
+      white-space: pre-wrap !important;
+    }
+
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
+    /*
      * Printing Tables:
      * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-  thead {
-    display: table-header-group;
+    thead {
+      display: table-header-group;
+    }
+
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
+
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
   }
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
 
