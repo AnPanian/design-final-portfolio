@@ -105,7 +105,7 @@ body {
   font-family: "hind";
   text-transform: uppercase;
   flex-direction: column;
-  width: 90%;
+  width: 93%;
 }
 h1 {
     font-size: 1.5em;
@@ -124,6 +124,7 @@ header .logo {
 
 header .content-wrapper,
 footer .content-wrapper {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -199,7 +200,51 @@ main #slide-show img {
     max-height: 300px;
 }
 
+/*****about page*****/
 
+hero .content-wrapper {
+  background: #fbfcf7;
+  display: flex;
+  justify-content: center;
+  align-content:center;
+  flex-direction: column;
+}
+hero i {
+    font-size:5em;
+}
+hero h3 {
+  font-size: 1em;
+  text-align: center;
+}
+hero .services {
+    width:40%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+hero p {
+  font-size: .8em;
+  text-align: center;
+}
+#about .content-wrapper {
+  padding: 35px;
+  display: flex;
+  justify-content: center;
+  align-content:center;
+  flex-flow: column;
+}
+#about .bio {
+  background: #fbfcf7;
+  color:black;
+  padding:15px;
+}
+#about .bio h3 {
+    text-align:center;
+}
+  #about .bio p {
+    font-size: .9em;
+    text-transform: initial;
+  }
 
 
 
@@ -377,7 +422,7 @@ main #slide-show img {
     justify-content: space-evenly;
     flex-direction: row;
   }
-}
+
 
 footer .contact-info {
     padding-top:10px;
@@ -385,16 +430,44 @@ footer .contact-info {
 footer .copywrite {
     padding-top: 30px;
 }
+/**About Page**/
+hero .content-wrapper {
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom:30px;
+}
+hero .services {
+    width:20%;
+}
+#about .content-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+#about img {
+    width: 85%;
+}
+#about .bio {
+    width: 50%;
+}
+#about .bio p {
+    text-transform:initial;
+}
+}
 
 @media only screen and (min-width: 1200px) {
   /* desktop*/
+
+  html {
+    background-color: #fbfcf7;
+  }
   body {
       width:100%;
       padding: 25px;
   }
 
 header .content-wrapper {
-  padding:10px;
+  padding:50px;
   display: flex;
   justify-content: space-around;
   align-content: center;
@@ -465,6 +538,18 @@ footer .content-wrapper {
   }
   footer .copywrite {
       font-size:.7em;
+  }
+
+  #about .content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: row;
+    padding-top:70px;
+    max-height: 400px;
+  }
+  #about .bio {
+      max-height: 300px;
   }
 }
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
