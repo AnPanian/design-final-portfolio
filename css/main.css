@@ -157,11 +157,10 @@ footer .content-wrapper {
     }
 
 .social {
-  padding-left:10px;
+  padding-left:40px;
   width:75%;
   display: flex;
   justify-content: space-evenly;
-  padding-left: 60px;
 }
 .social p{
       display:inline-block; 
@@ -202,30 +201,7 @@ main #slide-show img {
 
 /*****about page*****/
 
-hero .content-wrapper {
-  background: #fbfcf7;
-  display: flex;
-  justify-content: center;
-  align-content:center;
-  flex-direction: column;
-}
-hero i {
-    font-size:5em;
-}
-hero h3 {
-  font-size: 1em;
-  text-align: center;
-}
-hero .services {
-    width:40%;
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
-}
-hero p {
-  font-size: .8em;
-  text-align: center;
-}
+
 #about .content-wrapper {
   padding: 35px;
   display: flex;
@@ -251,6 +227,34 @@ hero p {
 .contact-form h1 {
     text-align:center;
     font-size:2em;
+}
+hero .content-wrapper {
+  background: #004d00;
+  width: 100%;
+  justify-items:center;
+  align-content:center;
+}
+
+hero i {
+  font-size: 7em;
+  text-align:center;
+}
+
+hero h3 {
+  font-size: .8em;
+  text-align: center;
+}
+
+hero .services {
+  width: 50%;
+  padding:0 20px;
+  justify-content:center;
+  align-content:center;
+}
+
+hero p {
+  font-size: .8em;
+  text-align: center;
 }
 
 /* Style inputs with type="text", select elements and textareas */
@@ -283,7 +287,7 @@ input[type=submit] {
 /* Add a background color and some padding around the form */
 .container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #004d00;
   padding: 20px;
 }
 }
@@ -557,7 +561,7 @@ header .content-wrapper {
       max-height: 1000px;
   }
     main #slide-show img {
-      width: 85%;
+      width: 60%;
       max-height: 1200px;
     }
 
